@@ -24,8 +24,7 @@
     gap: 1rem;
     align-items: center;
 }
-    padding: 0.7rem 1.7rem;
-}
+
 @media (max-width: 900px) {
     .header-flex {
         flex-direction: column;
@@ -69,12 +68,14 @@
     font-size: 1.15rem;
     padding-right: 2vw;
 }
-     max-width: 1100px;
-     margin-left: auto;
-     margin-right: auto;
-     width: 100%;
-     padding: 0 2rem;
-     box-sizing: border-box;
+.container {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
 .profile-social {
     display: flex;
     flex-direction: column;
@@ -111,6 +112,7 @@
 }
 /* Reset and base styles */
 * {
+    box-sizing: border-box;
 }
 html, body {
     scroll-behavior: smooth;
@@ -146,7 +148,8 @@ header h1 {
 }
 /* Remove special button styles for resume link in navbar */
 .resume-btn {
-    /* No special styles, inherit from nav a */
+    /* Keep the resume link visually consistent with other nav links */
+    color: #000000;
 }
 
 nav.navbar {
@@ -364,6 +367,28 @@ form button:hover {
     touch-action: auto;
     background: #ffffff;
     color: #000000;
+}
+
+/* Inline form confirmation message (non-blocking) */
+.form-confirmation {
+    margin-top: 0.6rem;
+    padding: 0.9rem 1rem;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #1e4620 0%, #2e8b57 100%);
+    color: #e9fff0;
+    box-shadow: 0 4px 18px rgba(20, 80, 40, 0.18);
+    font-weight: 600;
+    max-width: 100%;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    opacity: 0;
+    transform: translateY(-6px);
+}
+.form-confirmation.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.form-confirmation.hidden {
+    display: none !important;
 }
 
 /* Social icons */

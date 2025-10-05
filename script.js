@@ -15,7 +15,24 @@ const form = document.getElementById('contact-form');
 if (form) {
 	form.addEventListener('submit', function(e) {
 		e.preventDefault();
-		alert('Thank you for reaching out! I will get back to you soon.');
+		// Show inline confirmation message (accessible) instead of a blocking alert
+		const confirmation = document.getElementById('form-confirmation');
+		if (confirmation) {
+			confirmation.textContent = 'Your request has been received. Thank you — I will get back to you soon!';
+			confirmation.hidden = false;
+			confirmation.classList.remove('hidden');
+			// trigger reflow then add show to animate
+			// eslint-disable-next-line no-unused-expressions
+			confirmation.offsetHeight;
+			confirmation.classList.add('show');
+			// Move keyboard focus to the confirmation briefly for assistive tech
+			confirmation.focus({ preventScroll: true });
+			// Hide confirmation after 6 seconds
+			setTimeout(() => {
+				confirmation.classList.remove('show');
+				confirmation.hidden = true;
+			}, 6000);
+		}
 		form.reset();
 	});
 }
