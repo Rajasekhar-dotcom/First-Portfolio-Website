@@ -1,0 +1,424 @@
+/* Increase padding for the Download Resume navbar link only */
+.header-flex .navbar ul li a {
+    padding: 0.7rem 2rem;
+}
+/* Header flex layout for h1 and navbar side by side */
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    margin-bottom: 1.5rem;
+        min-height: 100px;
+}
+.header-flex h1 {
+    margin: 0;
+    font-size: 2.2rem;
+        line-height: 1.7;
+    padding: 0.7rem 2.5rem;
+    display: flex;
+    align-items: center;
+}
+.header-flex .navbar ul {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+    padding: 0.7rem 1.7rem;
+}
+@media (max-width: 900px) {
+    .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+    }
+    .header-flex .navbar ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .header-flex h1 {
+        font-size: 1.5rem;
+    }
+}
+/* Make the description of Project 1, 2, and 3 white */
+.project-card:nth-of-type(1) .project-card-front p,
+.project-card:nth-of-type(2) .project-card-front p,
+.project-card:nth-of-type(3) .project-card-front p {
+    color: #fff;
+}
+/* Make the description of Project 1 white */
+.project-card:first-of-type .project-card-front p {
+    color: #fff;
+}
+/* About section and profile picture side by side */
+/* About section and profile picture side by side - CLEANED UP */
+.about-flex {
+    display: flex;
+    align-items: stretch;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    min-height: 220px;
+}
+.about-flex #about {
+    flex: 5 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.15rem;
+    padding-right: 2vw;
+}
+     max-width: 1100px;
+     margin-left: auto;
+     margin-right: auto;
+     width: 100%;
+     padding: 0 2rem;
+     box-sizing: border-box;
+.profile-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    flex: 2 1 160px;
+    min-width: 160px;
+    justify-content: center;
+}
+.about-flex .profile-pic {
+    width: 180px;
+    height: 180px;
+    flex: none;
+    margin: 0;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+    justify-content: center;
+    width: 100%;
+}
+@media (max-width: 800px) {
+    .about-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+    }
+    .about-flex .profile-pic {
+        margin: 0 auto;
+    }
+}
+/* Reset and base styles */
+* {
+}
+html, body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 1s cubic-bezier(0.4,0.2,0.2,1);
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #000000 0%, #ffffff 100%);
+    color: #222;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(120deg, #000000 0%, #ffffff 100%);
+    color: #fff;
+    padding: 2.5rem 0 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+    position: relative;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+header h1 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.08);
+}
+/* Remove special button styles for resume link in navbar */
+.resume-btn {
+    /* No special styles, inherit from nav a */
+}
+
+nav.navbar {
+    margin: 0;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 18px;
+    transition: background 0.2s, color 0.2s;
+}
+nav a:hover {
+    background: #0e0e0e;
+    color: #fefefe;
+}
+
+main {
+    max-width: 950px;
+    margin: 2.5rem auto 0 auto;
+    padding: 2.5rem 2rem 2rem 2rem;
+    background: linear-gradient(120deg, #000000 0%, #ffffff 100%);
+    border-radius: 24px;
+    box-shadow: 0 12px 48px 0 rgba(0,0,0,0.35), 0 2px 24px 0 rgba(44,62,80,0.18);
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    margin-bottom: 2.8rem;
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.8s cubic-bezier(0.4,0.2,0.2,1), transform 0.8s cubic-bezier(0.4,0.2,0.2,1);
+    background: rgba(30,30,30,0.85);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    padding: 1.5rem 1.2rem;
+    color: #f5f5f5;
+}
+.js .fade-section {
+    opacity: 0;
+    transform: translateY(40px);
+}
+.js .fade-section.visible {
+    opacity: 1;
+    transform: none;
+}
+section h2 {
+    color: #fff;
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+    border-left: 5px solid #fff;
+    padding-left: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.profile-pic {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+section#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+section#skills li {
+    background: linear-gradient(90deg, #232526 0%, #181818 100%);
+    color: #fff;
+    padding: 0.5rem 1.3rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+    transition: background 0.2s;
+}
+section#skills li:hover {
+    background: linear-gradient(90deg, #181818 0%, #232526 100%);
+}
+
+/* Flip card container */
+.project-card {
+    background: none;
+    border-radius: 18px;
+    perspective: 1200px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    min-height: 180px;
+    height: 220px;
+    position: relative;
+    box-shadow: none;
+}
+.project-card-inner {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+    transform-style: preserve-3d;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
+}
+.project-card:hover .project-card-inner,
+.project-card:focus-within .project-card-inner {
+    transform: rotateY(180deg);
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.13);
+}
+.project-card-front, .project-card-back {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(120deg, #232526 0%, #181818 100%);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+.project-card-front {
+    z-index: 2;
+}
+.project-card-back {
+    transform: rotateY(180deg);
+    z-index: 3;
+    background: linear-gradient(120deg, #181818 0%, #232526 100%);
+    color: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+.project-card h3, .project-card-front h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+.project-card-back h3 {
+    color: #fff;
+}
+.project-card-front p {
+    color: #333;
+}
+.project-card-back p {
+    color: #e0eafc;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    background: linear-gradient(120deg, #232526 0%, #181818 100%);
+    padding: 1.5rem 1.2rem;
+    border-radius: 14px;
+    box-shadow: 0 1px 6px rgba(44, 62, 80, 0.07);
+    margin-bottom: 1.2rem;
+}
+form label {
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 0.2rem;
+}
+form input, form textarea {
+    padding: 0.7rem;
+    border: 1.5px solid #bfc9d1;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #ffffff;
+    color: #000000;
+    transition: border 0.2s;
+}
+form input:focus, form textarea:focus {
+    border: 1.5px solid #fff;
+    outline: none;
+}
+form button {
+    background: linear-gradient(90deg, #232526 0%, #181818 100%);
+    color: #fff;
+    border: 1.5px solid #fff;
+    padding: 0.7rem 0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+}
+form button:hover {
+    touch-action: auto;
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Social icons */
+a img[alt="Instagram"], a img[alt="LinkedIn"], a img[alt="GitHub"] {
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+    filter: drop-shadow(0 2px 6px rgba(44, 62, 80, 0.10));
+    transition: transform 0.18s;
+}
+a img[alt="Instagram"]:hover, a img[alt="LinkedIn"]:hover, a img[alt="GitHub"]:hover {
+    transform: scale(1.18) rotate(-6deg);
+}
+
+footer {
+    background: linear-gradient(90deg, #181818 0%, #232526 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1.2rem 0 1rem 0;
+    font-size: 1.1rem;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: 2.5rem;
+    box-shadow: 0 -2px 12px rgba(44, 62, 80, 0.08);
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    main {
+        padding: 1.2rem 0.5rem;
+    }
+}
+@media (max-width: 700px) {
+    header {
+        padding: 1.5rem 0 1rem 0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    main {
+        padding: 0.7rem 0.2rem;
+    }
+    section h2 {
+        font-size: 1.2rem;
+    }
+    .profile-pic {
+        width: 90px;
+        height: 90px;
+    }
+    .project-card {
+        padding: 1rem 0.7rem;
+    }
+}

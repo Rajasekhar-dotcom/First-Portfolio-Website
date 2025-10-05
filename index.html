@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajasekhar Vedula | Portfolio</title>
+    <meta name="description" content="Portfolio of Rajasekhar Vedula, a passionate student and developer.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-flex">
+            <h1>Rajasekhar Vedula</h1>
+            <nav class = "navbar">
+                <ul>
+                    <li class = "nav-links"><a href = "#about">About Me</a></li>
+                    <li class = "nav-links"><a href = "#skills">Skills</a></li>
+                    <li class = "nav-links"><a href = "#projects">Projects</a></li>
+                    <li class = "nav-links"><a href = "#contact">Contact</a></li>
+                    <li class = "nav-links"><a href="/assets/dummy_resume.pdf" target="_blank" download class="resume-btn">Download Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="about-flex">
+            <section id = "about">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </section>
+            <div class="profile-social">
+                <img src = "download.jpg" class = "profile-pic">
+                <div class="social-links">
+                    <a href = "https://instagram.com" target = "_blank"><img src = "ig-instagram-icon.svg" alt = "Instagram" height = "30px" width = "30px"></a>
+                    <a href = "https://linkedin.com" target = "_blank"><img src = "linkedin-app-icon.svg" alt = "LinkedIn" height = "30px" width = "30px"></a>
+                    <a href = "https://github.com" target = "_blank"><img src = "github-icon.svg" alt = "GitHub" height = "30px" width = "30px"></a>
+                </div>
+            </div>
+        </div>
+        <section id = "skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+            </ul>
+        </section>
+        <section id = "projects">
+            <h2>Projects</h2>
+            <div class="project-card" tabindex="0">
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <h3>Project Title 1</h3>
+                        <p>Brief description of Project 1.</p>
+                    </div>
+                    <div class="project-card-back">
+                        <h3>Details</h3>
+                        <p>Technologies: HTML, CSS, JavaScript<br>Role: Lead Developer<br>Year: 2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" tabindex="0">
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <h3>Project Title 2</h3>
+                        <p>Brief description of Project 2.</p>
+                    </div>
+                    <div class="project-card-back">
+                        <h3>Details</h3>
+                        <p>Technologies: Python, Flask<br>Role: Backend Developer<br>Year: 2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" tabindex="0">
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <h3>Project Title 3</h3>
+                        <p>Brief description of Project 3.</p>
+                    </div>
+                    <div class="project-card-back">
+                        <h3>Details</h3>
+                        <p>Technologies: React, Node.js<br>Role: Full Stack<br>Year: 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id = "contact">
+        <h2>Contact</h2>
+        <form>
+            <label for = "name">Name:</label>
+            <input type = "text" id = "name" name = "name" required><br>
+            <label for = "email">Email:</label>
+            <input type = "email" id = "email" name = "email" required><br>
+            <label for = "message">Message:</label>
+            <textarea id = "message" name = "message" required></textarea><br>
+            <button type = "submit">Send</button>
+        </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Rajasekhar Vedula. All rights reserved.</p>
+    </footer>
+</body>
+</html>
